@@ -5,7 +5,7 @@
 > 1.0, and every color change is listed in
 > [Gneiss's changelog](https://github.com/gneiss-theme/gneiss/blob/main/CHANGELOG.md).
 
-![Gneiss in Obsidian](screenshot.png)
+![Gneiss in Obsidian](preview.png)
 
 Gneiss (pronounced "nice") is Nord's colors on neutral dark grays. It keeps
 Nord's syntax and status colors and swaps its blue-gray backgrounds for

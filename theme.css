@@ -1,0 +1,125 @@
+/*
+ * Gneiss for Obsidian: Nord's colors on neutral dark grays.
+ * https://github.com/gneiss-theme/gneiss
+ *
+ * Rendered from Gneiss's palette.toml, which the build fills in where the
+ * template names a color in double braces. Dark only: in light mode,
+ * Obsidian's own colors show.
+ *
+ * It sets Obsidian's gray scale and accent from Gneiss's grays and gneiss8,
+ * then the colors Obsidian would otherwise take from its own defaults:
+ * borders, selections, status colors, callouts, code and headings. Where
+ * Obsidian tints a background with a color, Gneiss uses a neutral gray.
+ */
+
+.theme-dark {
+  /* Obsidian's grays, darkest to lightest, on Gneiss's: gneiss0 for notes,
+     gneiss1 for sidebars and code, gneiss2 for raised controls, gneiss3 for
+     borders, then the comment gray and fg-muted for faint and muted text. */
+  --color-base-00: #1C1C1C;
+  --color-base-05: #1C1C1C;
+  --color-base-10: #2D2D2D;
+  --color-base-20: #2D2D2D;
+  --color-base-25: #383838;
+  --color-base-30: #383838;
+  --color-base-35: #424242;
+  --color-base-40: #6E6E6E;
+  --color-base-50: #6E6E6E;
+  --color-base-60: #A2A2A2;
+  --color-base-70: #A2A2A2;
+  --color-base-100: #D8DEE9;
+
+  /* The accent, gneiss8, as Obsidian takes it. An accent color picked in
+     Obsidian's settings replaces it. */
+  --accent-h: 193.3;
+  --accent-s: 43.4%;
+  --accent-l: 67.5%;
+
+  --color-red: #BF616A;
+  --color-orange: #D08770;
+  --color-yellow: #EBCB8B;
+  --color-green: #A3BE8C;
+  --color-cyan: #88C0D0;
+  --color-blue: #81A1C1;
+  --color-purple: #B48EAD;
+  --color-pink: #B48EAD;
+
+  /* Surfaces and borders */
+  --background-modifier-border: #424242;
+  --background-modifier-border-hover: #6E6E6E;
+  --background-modifier-border-focus: #6E6E6E;
+  --background-modifier-active-hover: #383838;
+  --nav-item-background-selected: #383838;
+  --table-selection: #383838;
+  --text-selection: #383838;
+
+  /* Text */
+  --text-accent: #88C0D0;
+  --text-accent-hover: #8FBCBB;
+  --text-on-accent: #1C1C1C;
+  --text-on-accent-inverted: #1C1C1C;
+  --text-error: #BF616A;
+  --text-warning: #EBCB8B;
+  --text-success: #A3BE8C;
+  --caret-color: #D8DEE9;
+  --interactive-accent: #88C0D0;
+  --interactive-accent-hover: #8FBCBB;
+
+  /* Headings in the accent, as in Gneiss's VS Code theme. */
+  --h1-color: #88C0D0;
+  --h2-color: #88C0D0;
+  --h3-color: #88C0D0;
+  --h4-color: #88C0D0;
+  --h5-color: #88C0D0;
+  --h6-color: #88C0D0;
+
+  /* Tags: accent text on the panel gray. */
+  --tag-background: #2D2D2D;
+  --tag-background-hover: #383838;
+  --tag-border-color: #424242;
+  --tag-border-color-hover: #424242;
+
+  /* Callouts. Warnings are yellow and errors red, as everywhere in Gneiss;
+     questions take the deep blue, for hints, rather than orange. */
+  --callout-default: #81A1C1;
+  --callout-info: #81A1C1;
+  --callout-todo: #81A1C1;
+  --callout-summary: #88C0D0;
+  --callout-tip: #88C0D0;
+  --callout-important: #88C0D0;
+  --callout-success: #A3BE8C;
+  --callout-question: #5E81AC;
+  --callout-warning: #EBCB8B;
+  --callout-fail: #BF616A;
+  --callout-error: #BF616A;
+  --callout-bug: #BF616A;
+  --callout-example: #B48EAD;
+  --callout-quote: #A2A2A2;
+  --callout-border-width: 0 0 0 3px;
+  --callout-border-opacity: 1;
+
+  /* Code, with the same colors as Gneiss's VS Code and Neovim ports. */
+  --code-background: #2D2D2D;
+  --code-normal: #D8DEE9;
+  --code-comment: #6E6E6E;
+  --code-function: #88C0D0;
+  --code-important: #EBCB8B;
+  --code-keyword: #81A1C1;
+  --code-operator: #81A1C1;
+  --code-property: #8FBCBB;
+  --code-punctuation: #ECEFF4;
+  --code-string: #A3BE8C;
+  --code-tag: #81A1C1;
+  --code-value: #B48EAD;
+
+  /* The graph view */
+  --graph-node-tag: #A3BE8C;
+  --graph-node-attachment: #EBCB8B;
+}
+
+/* Callouts on the panel gray, edged on the left in their color, rather than
+   tinted with it. Obsidian sets the tint on .callout itself, not through a
+   variable. */
+.theme-dark .callout {
+  background-color: #2D2D2D;
+}

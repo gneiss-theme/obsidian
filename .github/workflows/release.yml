@@ -1,0 +1,31 @@
+# Pushing a tag releases the theme: a GitHub release named for the tag, with
+# theme.css and manifest.json, which is what Obsidian installs. The tag must
+# be the manifest's version exactly, such as 0.1.0.
+name: Release
+
+on:
+  push:
+    tags: ["*"]
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - name: Check the tag is the manifest's version
+        run: |
+          version=$(jq -r .version manifest.json)
+          if [ "$version" != "$GITHUB_REF_NAME" ]; then
+            echo "The tag $GITHUB_REF_NAME isn't manifest.json's version, $version." >&2
+            exit 1
+          fi
+      - name: Release theme.css and manifest.json
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create "$GITHUB_REF_NAME" theme.css manifest.json \
+            --title "$GITHUB_REF_NAME" \
+            --notes "Gneiss $GITHUB_REF_NAME. Changes: https://github.com/gneiss-theme/gneiss/blob/main/CHANGELOG.md"
