@@ -23,7 +23,7 @@ scheme** to **Dark**.
 This repo is what Obsidian installs Gneiss from. The theme is made in
 [gneiss-theme/gneiss](https://github.com/gneiss-theme/gneiss), rendered from
 its palette, along with Gneiss's other ports, so issues and changes go
-there. The [docs site](https://gneiss-theme.github.io/gneiss/) has the
+there. The [docs site](https://gneisstheme.com/) has the
 palette and every port.
 
 Gneiss is MIT licensed; see [LICENSE](LICENSE). Its colors began as
