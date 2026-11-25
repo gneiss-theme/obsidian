@@ -10,6 +10,11 @@
  * then the colors Obsidian would otherwise take from its own defaults:
  * borders, selections, status colors, callouts, code and headings. Where
  * Obsidian tints a background with a color, Gneiss uses a neutral gray.
+ *
+ * A note is mostly text, headings and links, so the accent is kept for the
+ * small things you act on: checkboxes, buttons, toggles and sliders.
+ * Headings are white, links the deeper gneiss9 and tags gray, so a note
+ * isn't covered in gneiss8.
  */
 
 .theme-dark {
@@ -53,6 +58,11 @@
   --table-selection: #383838;
   --text-selection: #383838;
 
+  /* ==Highlights== on the border gray, rather than Obsidian's yellow tint,
+     and quotes edged in the comment gray rather than the accent. */
+  --text-highlight-bg: #424242;
+  --blockquote-border-color: #6E6E6E;
+
   /* Text */
   --text-accent: #88C0D0;
   --text-accent-hover: #8FBCBB;
@@ -65,22 +75,38 @@
   --interactive-accent: #88C0D0;
   --interactive-accent-hover: #8FBCBB;
 
-  /* Headings in the accent, as in Gneiss's VS Code theme. */
-  --h1-color: #88C0D0;
-  --h2-color: #88C0D0;
-  --h3-color: #88C0D0;
-  --h4-color: #88C0D0;
-  --h5-color: #88C0D0;
-  --h6-color: #88C0D0;
+  /* Links in gneiss9, a step deeper and calmer than the accent, with the
+     accent on hover. Bold in the brightest white, with the headings. */
+  --link-color: #81A1C1;
+  --link-color-hover: #88C0D0;
+  --link-external-color: #81A1C1;
+  --link-external-color-hover: #88C0D0;
+  --link-unresolved-color: #81A1C1;
+  --bold-color: #ECEFF4;
 
-  /* Tags: accent text on the panel gray. */
+  /* Headings in Gneiss's whites, told apart by size and weight: gneiss6 for
+     h1 and h2 (and the note's title, which takes h1's color), gneiss5 below.
+     Gneiss's editor ports color Markdown headings with the accent, but a
+     note has far more of them than a file of code does. */
+  --h1-color: #ECEFF4;
+  --h2-color: #ECEFF4;
+  --h3-color: #E5E9F0;
+  --h4-color: #E5E9F0;
+  --h5-color: #E5E9F0;
+  --h6-color: #E5E9F0;
+
+  /* Tags: muted gray text on the panel gray, the accent on hover. */
+  --tag-color: #A2A2A2;
+  --tag-color-hover: #88C0D0;
   --tag-background: #2D2D2D;
   --tag-background-hover: #383838;
   --tag-border-color: #424242;
   --tag-border-color-hover: #424242;
 
   /* Callouts. Warnings are yellow and errors red, as everywhere in Gneiss;
-     questions take the deep blue, for hints, rather than orange. */
+     questions take the deep blue, for hints, rather than orange. The color
+     is on the edge and the icon; titles are white. */
+  --callout-title-color: #ECEFF4;
   --callout-default: #81A1C1;
   --callout-info: #81A1C1;
   --callout-todo: #81A1C1;
